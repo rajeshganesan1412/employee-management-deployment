@@ -26,27 +26,31 @@ public class EmployeeController {
 
     @GetMapping("/employee")
     public List<Employee> getAllEmployees() {
-        log.info("Entering into getAllEmoployees...");
+        log.info("Entering controller to get all employee details");
         return employeeServiceInterface.getAllEmployees();
     }
 
     @GetMapping("/employee/{id}")
     public Employee getEmployeeById(@PathVariable Long id) {
+        log.info("Entering controller to get employee details for {}", id);
         return employeeServiceInterface.getEmployeeById(id);
     }
 
     @PostMapping("/employee")
     public Employee addEmployeeDetails(@Valid @RequestBody Employee employee) {
+        log.info("Entering controller to add employee details and the request is: {}", employee);
         return employeeServiceInterface.addEmployeeDetails(employee);
     }
 
     @PutMapping("/employee/{id}")
     public Employee updateEmployeeDetails(@Valid @RequestBody Employee employee, @PathVariable Long id) {
+        log.info("Entering controller to update employee details and the request is: {}", employee);
         return employeeServiceInterface.editEmployeeDetails(employee, id);
     }
 
     @DeleteMapping("/employee/{id}")
     public Employee deleteByEmployeeId(@PathVariable Long id) {
+        log.info("Entering controller to delete employee details for {}", id);
         return employeeServiceInterface.deleteEmployeeById(id);
     }
 }

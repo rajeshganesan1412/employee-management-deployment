@@ -80,6 +80,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>employee-management</finalName>
 	</build>
 
 </project>
