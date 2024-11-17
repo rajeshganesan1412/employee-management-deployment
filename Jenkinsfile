@@ -27,5 +27,11 @@ pipeline{
                 }
             }
         }
+        stage ('Deploy into kubernetes') {
+            steps {
+                script {
+                }
+            }
+        }
     }
 }
