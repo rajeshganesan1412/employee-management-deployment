@@ -11,4 +11,7 @@ public class EmployeeNotFoundException extends RuntimeException {
     private String errorMessage;
     private HttpStatus httpCode;
 
+    public EmployeeNotFoundException(String errorMessage) {
+        super(errorMessage);
+    }
 }
